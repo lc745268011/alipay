@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--声明文档的兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!--移动设备-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <link rel="stylesheet" href="./res/css/H-ui.reset.css"/>
+    <link rel="stylesheet" href="./res/css/index.css"/>
+    <script src="./res/js/jquery-1.10.2.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="title">
+        填写信息
+    </div>
+    <ul class="InfoList">
+        <li class="cl">
+            <div class="l">姓名</div>
+            <div class="r">
+                <input type="text" placeholder="您淘宝账号对应的姓名"/>
+            </div>
+        </li>
+        <li class="cl">
+            <div class="l">身份证号码</div>
+            <div class="r">
+                <input type="text" placeholder="淘宝账号绑定的身份信息"/>
+            </div>
+        </li>
+        <li class="cl">
+            <div class="l">联系方式</div>
+            <div class="r">
+                <input type="text" placeholder="请输入手机号码"/>
+            </div>
+        </li>
+        <li class="cl">
+            <div class="l">安装地址</div>
+            <div class="r">
+                <select name="" id=""></select>
+            </div>
+        </li>
+        <li class="cl">
+            <input type="text" placeholder="请填写详细的安装地址"/>
+        </li>
+    </ul>
+    <div class="title">
+        所在地区可用宽带
+    </div>
+    <div class="noSupport">
+        <img src="./res/img/noSupport.png" alt="" />
+    </div>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

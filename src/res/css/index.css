@@ -1,0 +1,13 @@
+*{box-sizing: border-box}
+.l{float: left}
+.r{float: right}
+.title{height: 0.8rem;color: #999999;font-size: 0.26rem;background: #f8f8f8;padding: 0.26rem 0.3rem 0;border-bottom: 1px solid #dddddd;}
+.InfoList{padding: 0 0.3rem;border-bottom: 1px solid #dddddd;}
+.InfoList li{height: 0.9rem;line-height: 0.9rem;color: #333333;font-size: 0.34rem;border-bottom: 1px solid #dddddd;width: 100%}
+.InfoList li:last-child{border-bottom: 0}
+.InfoList li .l{width: 40%}
+.InfoList li .r{width: 60%;}
+.InfoList li input{border: 0;font-size: 0.34rem;text-align: right;width: 100%}
+.InfoList li:last-child input{text-align: left;width: 100%}
+.noSupport{padding: 3rem 0 2.25rem;background: #fff;text-align: center}
+.noSupport img{width: 3.3rem;}
