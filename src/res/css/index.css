@@ -1,13 +1,88 @@
 *{box-sizing: border-box}
 .l{float: left}
 .r{float: right}
+.vCenter{display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; }
 .title{height: 0.8rem;color: #999999;font-size: 0.26rem;background: #f8f8f8;padding: 0.26rem 0.3rem 0;border-bottom: 1px solid #dddddd;}
-.InfoList{padding: 0 0.3rem;border-bottom: 1px solid #dddddd;}
+.InfoList{padding: 0 0.3rem;border-bottom: 1px solid #dddddd;background: #fff}
 .InfoList li{height: 0.9rem;line-height: 0.9rem;color: #333333;font-size: 0.34rem;border-bottom: 1px solid #dddddd;width: 100%}
 .InfoList li:last-child{border-bottom: 0}
 .InfoList li .l{width: 40%}
-.InfoList li .r{width: 60%;}
+.InfoList li .r{width: 60%;height:100%}
 .InfoList li input{border: 0;font-size: 0.34rem;text-align: right;width: 100%}
+/*.InfoList li input.area{width: 90%}*/
+.InfoList li img.right{width: 0.14rem;margin-left: 0.14rem}
 .InfoList li:last-child input{text-align: left;width: 100%}
 .noSupport{padding: 3rem 0 2.25rem;background: #fff;text-align: center}
 .noSupport img{width: 3.3rem;}
+.goodsList{background: #fff}
+.goodsList li{padding: 0.3rem;border-bottom: 1px solid #dddddd;position: relative}
+.goodsList li .product{width: 1.78rem}
+.goodsList li .goodsDetail{margin: 0.1rem 0 0 0.16rem}
+.goodsList li .goodsDetail .goodsName{font-size: 0.28rem;color: #333}
+.goodsList li .goodsDetail .goodsMoney{font-size: 0.32rem;color: #ff5000}
+.radio .uncheck,.agreement .uncheck {
+    display: block;
+    width: 0.44rem;
+    height: 0.44rem;
+    background: url(../img/uncheck.png)no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.4rem;
+}
+.radio .checked,.agreement .checked {
+    display: none;
+    width: 0.44rem;
+    height: 0.44rem;
+    background: url(../img/checked.png)no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.4rem;
+}
+.goodsList li.on .uncheck,.agreement.on .uncheck{
+    display:none;
+}
+.goodsList li.on .checked ,.agreement.on .checked{
+    display: block;
+}
+.service{height: 0.98rem;line-height: 0.98rem;text-align: center;border-bottom: 1px solid #ddd;background: #fff}
+.service img{width: 0.44rem;margin-right: 0.1rem}
+.service a{color: #333;font-size: 0.24rem}
+.rel {
+    position: relative;
+}
+.nowDo{
+    width:100%;
+    margin-top:1.866667rem;
+    background-color:#fff;
+    padding:0.3rem;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+.nowBtn{
+    display:block;
+    width:100%;
+    margin:0.2rem auto 0;
+    height:0.85rem;
+    line-height:0.85rem;
+    background: #1CCFC9;
+    border-radius:0.133333rem;
+    color:#fff;
+    font-size:0.36rem;
+    text-align:center;
+}
+.nowDo p{
+    text-align: left;
+    line-height:0.34rem;
+    font-size:0.28rem;
+    color: #000;
+    padding-left:0.6rem;
+}
+.agreement .uncheck,.agreement .checked{left: 0;top: 0;transform: translateY(0);0}
+/*order*/
+.section{margin-bottom: 0.2rem}
+.section.goOrder,.section.goOrder a{width: 6.9rem;height: 0.84rem;line-height: 0.84rem;text-align: center;color: #fff;background: #1ccfc9;margin: 0.4rem auto 0.2rem;border-radius: 0.12rem;font-size: 0.36rem}

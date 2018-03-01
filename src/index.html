@@ -8,51 +8,104 @@
     <meta name="author" content=""/>
     <!--移动设备-->
     <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <meta name="viewport"
+          content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
     <link rel="stylesheet" href="./res/css/H-ui.reset.css"/>
     <link rel="stylesheet" href="./res/css/index.css"/>
     <script src="./res/js/jquery-1.10.2.js"></script>
     <title></title>
+
 </head>
-<body>
-    <div class="title">
-        填写信息
-    </div>
-    <ul class="InfoList">
+<body style="background: #f8f8f8">
+<div class="title">
+    填写信息
+</div>
+<ul class="InfoList">
+    <li class="cl">
+        <div class="l">姓名</div>
+        <div class="r">
+            <input type="text" placeholder="您淘宝账号对应的姓名"/>
+        </div>
+    </li>
+    <li class="cl">
+        <div class="l">身份证号码</div>
+        <div class="r">
+            <input type="text" placeholder="淘宝账号绑定的身份信息"/>
+        </div>
+    </li>
+    <li class="cl">
+        <div class="l">联系方式</div>
+        <div class="r">
+            <input type="text" placeholder="请输入手机号码"/>
+        </div>
+    </li>
+    <li class="cl">
+        <div class="l">安装地址</div>
+        <div class="r vCenter" id="sel_city">
+            <input type="text" placeholder="请选择安装地区" class="area" id="city"/>
+            <img src="./res/img/right.png" alt="" class="right"/>
+        </div>
+    </li>
+    <li class="cl">
+        <input type="text" placeholder="请填写详细的安装地址"/>
+    </li>
+</ul>
+<div class="title">
+    所在地区可用宽带
+</div>
+<div class="noSupport" hidden>
+    <img src="./res/img/noSupport.png" alt=""/>
+</div>
+<div style="margin-bottom: 3.46rem">
+    <ul class="goodsList">
         <li class="cl">
-            <div class="l">姓名</div>
-            <div class="r">
-                <input type="text" placeholder="您淘宝账号对应的姓名"/>
+            <img src="./res/img/product.jpg" alt="" class="l product"/>
+            <div class="goodsDetail l">
+                <div class="goodsName">济南联通200M 含设备押金</div>
+                <div class="goodsMoney">￥600.00</div>
+            </div>
+            <div class="radio">
+                <i class="uncheck"></i>
+                <i class="checked"></i>
             </div>
         </li>
         <li class="cl">
-            <div class="l">身份证号码</div>
-            <div class="r">
-                <input type="text" placeholder="淘宝账号绑定的身份信息"/>
+            <img src="./res/img/product.jpg" alt="" class="l product"/>
+            <div class="goodsDetail l">
+                <div class="goodsName">济南联通200M 含设备押金</div>
+                <div class="goodsMoney">￥600.00</div>
+            </div>
+            <div class="radio">
+                <i class="uncheck"></i>
+                <i class="checked"></i>
             </div>
         </li>
         <li class="cl">
-            <div class="l">联系方式</div>
-            <div class="r">
-                <input type="text" placeholder="请输入手机号码"/>
+            <img src="./res/img/product.jpg" alt="" class="l product"/>
+            <div class="goodsDetail l">
+                <div class="goodsName">济南联通200M 含设备押金</div>
+                <div class="goodsMoney">￥600.00</div>
             </div>
-        </li>
-        <li class="cl">
-            <div class="l">安装地址</div>
-            <div class="r">
-                <select name="" id=""></select>
+            <div class="radio">
+                <i class="uncheck"></i>
+                <i class="checked"></i>
             </div>
-        </li>
-        <li class="cl">
-            <input type="text" placeholder="请填写详细的安装地址"/>
         </li>
     </ul>
-    <div class="title">
-        所在地区可用宽带
+    <div class="service">
+        <a href="">
+            <img src="./res/img/service.png" alt=""/>客服
+        </a>
     </div>
-    <div class="noSupport">
-        <img src="./res/img/noSupport.png" alt="" />
+</div>
+<div class="nowDo">
+    <div class="clearfix">
+        <p class="rel agreement on" data-spm-anchor-id="a1z51.2385650200020001.0.i8"> <i class="uncheck"></i><i class="checked"></i>我已阅读并同意芝麻信用授权协议，并同意商户查询我
+            的芝麻分或评估结果</p>
     </div>
+
+    <a class="nowBtn mt-15">芝麻信用先享后付，立即下单</a>
+</div>
 <script>
     (function (doc, win) {
         var docEl = doc.documentElement,
@@ -66,6 +119,31 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
+    $(document).on('click','.goodsList li',function(){
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
+    });
+    $(".agreement").click(function(){
+        $(this).toggleClass("on");
+    });
 </script>
+<script src="./res/js/picker.min.js"></script>
+<script src="./res/js/city.js"></script>
+<script src="./res/js/index.js"></script>
+<style>
+    .picker .picker-panel .picker-choose {
+        position: relative;
+        height: 0.84rem;
+        color: #29AEFE;
+        font-size: 0.32rem;
+        line-height: 0.84rem;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    .picker .picker-panel .picker-choose .cancel, .picker .picker-panel .picker-choose .confirm {
+        top: 0;
+        padding: 0 10px;
+        color: #29AEFE;
+    }
+</style>
 </body>
 </html>
