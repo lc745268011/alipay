@@ -14,6 +14,10 @@
     <script src="../res/js/jquery-1.10.2.js"></script>
     <title></title>
 </head>
+<style>
+    .nowDo{background: rgba(0,0,0,0.8)}
+    .nowDo .agreement{color: #fff}
+</style>
 <body>
 <div class="header">
     <img src="../res/img/header.jpg" alt="" width="100%"/>
@@ -30,6 +34,14 @@
 <div class="section">
     <img src="../res/img/notice.jpg" alt="" width="100%"/>
 </div>
+<div class="nowDo">
+    <div class="clearfix">
+        <p class="rel agreement on" data-spm-anchor-id="a1z51.2385650200020001.0.i8">
+            <i class="uncheck"></i><i class="checked"></i>为了办理该服务，您授权商户向芝麻信用查询您的芝麻分，姓名，身份证号码。</p>
+    </div>
+
+    <a class="nowBtn mt-15">马上预约</a>
+</div>
 <script>
     (function (doc, win) {
         var docEl = doc.documentElement,
@@ -43,6 +55,9 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
+    $(".agreement").click(function(){
+        $(this).toggleClass("on");
+    });
 </script>
 </body>
 </html>
